@@ -15,6 +15,11 @@ namespace ASPCoreAssessment.Data
         {
         }
 
+        public DbSet<HotelRoom> Rooms { get; set; }
+        public DbSet<HotelBooking> Booking { get; set; }
+        public DbSet<HotelGuest> Guests { get; set; }
+        public DbSet<HotelBill> Billing { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

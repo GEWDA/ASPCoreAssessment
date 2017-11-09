@@ -13,6 +13,12 @@ namespace ASPCoreAssessment.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
+            //Get records
+
+            //Put items into a model
+
+            //Pass view to model and render
+
             return View();
         }
     }
