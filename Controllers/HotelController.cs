@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ASPCoreAssessment.Controllers
 {
-    public class HomePageController : Controller
+    public class HotelController : Controller
     {
         // GET: /<controller>/
         public IActionResult Index()
