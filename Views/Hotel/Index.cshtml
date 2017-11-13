@@ -1,7 +1,169 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@model HotelViewModelRoom
+@model HotelViewModel_ALL_
 @{
     ViewData["Title"] = "Welcome to SunShine Hotel";
+    ViewData["Header-Bookings"] = "Current Bookings";
+    ViewData["Header-Rooms"] = "Rooms";
+    ViewData["Header-Guests"] = "Guests";
+    ViewData["Header-Billing"] = "Billing";
+    ViewData["ViewInDetail"] = "More...";
 }
+
+<div class="panel panel-default homepage-panel">
+    <div class="panel-heading">@ViewData["Title"]</div>
+    <br />
+
+    @*
+        Bookings Section
+    *@
+    <br />
+    <div class="panel-heading">
+        @ViewData["Header-Bookings"]
+        <button class="viewbookings-button">@ViewData["ViewInDetail"]</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>From</td>
+                <td>To</td>
+                <td>Hotel Room Id</td>
+                <td>Cost</td>
+                <td>Room</td>
+            </tr>
+        </thead>
+        @*
+        @foreach (var booking in Model.Bookings)
+        {
+            <tr>
+                <td>@booking.Id</td>
+                <td>@booking.BookingFrom</td>
+                <td>@booking.BookingTo</td>
+                <td>@booking.HotelRoomId</td>
+                <td>@booking.RoomCost</td>
+                <td>@booking.Room</td>
+            </tr>
+        }
+        *@
+    </table>
+
+    @*
+        Rooms Section
+    *@
+    <br />
+    <div class="panel-heading">
+        @ViewData["Header-Rooms"]
+        <button class="viewrooms-button">@ViewData["ViewInDetail"]</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Number</td>
+                <td>Single Beds Available</td>
+                <td>Price per Single</td>
+                <td>Double Beds Available</td>
+                <td>Price per Double</td>
+                <td>Extra Beds Available</td>
+                <td>Price per Extra</td>
+            </tr>
+        </thead>
+        @*
+        @foreach (var room in Model.Rooms)
+        {
+            <tr>
+                <td>@room.Id</td>
+                <td>@room.RoomNumber</td>
+                <td>@room.NumberSingleBeds</td>
+                <td>@room.PriceSingle</td>
+                <td>@room.NumberDoubleBeds</td>
+                <td>@room.PriceDouble</td>
+                <td>@room.NumberExtraBeds</td>
+                <td>@room.PricePerExtra</td>
+                <td></td>
+            </tr>
+        }
+        *@
+    </table>
+
+    @*
+        Guests Section
+    *@
+    <br />
+    <div class="panel-heading">
+        @ViewData["Header-Guests"]
+        <button class="viewguests-button">@ViewData["ViewInDetail"]</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Address</td>
+                <td>Number Of Guests</td>
+                <td>Room Booked</td>
+                <td>Hotel Booking Id</td>
+                <td>Check In</td>
+                <td>Check Out</td>
+                <td>Booking Date</td>
+                <td>Booking</td>
+            </tr>
+        </thead>
+        @*
+        @foreach (var guest in Model.Guests)
+        {
+            <tr>
+                <td>@guest.Id</td>
+                <td>@guest.FirstName</td>
+                <td>@guest.LastName</td>
+                <td>@guest.Address</td>
+                <td>@guest.NumberOfGuests</td>
+                <td>@guest.RoomBooked</td>
+                <td>@guest.HotelBookingId</td>
+                <td>@guest.CheckIn</td>
+                <td>@guest.CheckOut</td>
+                <td>@guest.BookingDate</td>
+                <td>@guest.Booking</td>
+            </tr>
+        }
+        *@
+    </table>
+    @*
+        Billing Section
+    *@
+    <br />
+    <div class="panel-heading">
+        @ViewData["Header-Billing"]
+        <button class="viewbilling-button">@ViewData["ViewInDetail"]</button>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Guest</td>
+                <td>Hotel Guest Id</td>
+                <td>Bar Charge</td>
+                <td>WiFi Charge</td>
+                <td>Telephone Charge</td>
+                <td>Room Charge</td>
+            </tr>
+        </thead>
+        @*
+        @foreach (var bill in Model.Billing)
+        {
+            <tr>
+                <td>@bill.Id</td>
+                <td>@bill.Guest</td>
+                <td>@bill.HotelGuestId</td>
+                <td>@bill.BarCharge</td>
+                <td>@bill.WiFiCharge</td>
+                <td>@bill.TelephoneCharge</td>
+                <td>@bill.RoomCharge</td>
+            </tr>
+        }
+        *@
+    </table>
+</div>

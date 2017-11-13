@@ -21,4 +21,11 @@ namespace ASPCoreAssessment.Models
     {
         public IEnumerable<HotelBill> Billing { get; set; }
     }
+    public class HotelViewModel_ALL_
+    {
+        public IEnumerable<HotelRoom> Rooms { get; set; }
+        public IEnumerable<HotelBooking> Bookings { get; set; }
+        public IEnumerable<HotelGuest> Guests { get; set; }
+        public IEnumerable<HotelBill> Billing { get; set; }
+    }
 }
