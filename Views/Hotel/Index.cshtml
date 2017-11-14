@@ -12,14 +12,14 @@
 }
 
 <div class="panel panel-default homepage-panel">
-    <div class="panel-heading">@ViewData["Title"]</div>
+    <div class="panel-heading panel-myheading">@ViewData["Title"]</div>
     <br />
 
     @*
         Bookings Section
     *@
     <br />
-    <div class="panel-heading">
+    <div class="panel-heading table-heading">
         @ViewData["Header-Bookings"]
         <button class="viewbookings-button">@ViewData["ViewInDetail"]</button>
     </div>
@@ -34,7 +34,7 @@
                 <td>Room</td>
             </tr>
         </thead>
-        @*
+        
         @foreach (var booking in Model.Bookings)
         {
             <tr>
@@ -46,14 +46,14 @@
                 <td>@booking.Room</td>
             </tr>
         }
-        *@
+        
     </table>
 
     @*
         Rooms Section
     *@
     <br />
-    <div class="panel-heading">
+    <div class="panel-heading table-heading">
         @ViewData["Header-Rooms"]
         <button class="viewrooms-button">@ViewData["ViewInDetail"]</button>
     </div>
@@ -70,7 +70,7 @@
                 <td>Price per Extra</td>
             </tr>
         </thead>
-        @*
+        
         @foreach (var room in Model.Rooms)
         {
             <tr>
@@ -85,14 +85,14 @@
                 <td></td>
             </tr>
         }
-        *@
+        
     </table>
 
     @*
         Guests Section
     *@
     <br />
-    <div class="panel-heading">
+    <div class="panel-heading table-heading">
         @ViewData["Header-Guests"]
         <button class="viewguests-button">@ViewData["ViewInDetail"]</button>
     </div>
@@ -112,7 +112,7 @@
                 <td>Booking</td>
             </tr>
         </thead>
-        @*
+        
         @foreach (var guest in Model.Guests)
         {
             <tr>
@@ -129,13 +129,13 @@
                 <td>@guest.Booking</td>
             </tr>
         }
-        *@
+        
     </table>
     @*
         Billing Section
     *@
     <br />
-    <div class="panel-heading">
+    <div class="panel-heading table-heading">
         @ViewData["Header-Billing"]
         <button class="viewbilling-button">@ViewData["ViewInDetail"]</button>
     </div>
@@ -151,7 +151,7 @@
                 <td>Room Charge</td>
             </tr>
         </thead>
-        @*
+        
         @foreach (var bill in Model.Billing)
         {
             <tr>
@@ -164,6 +164,6 @@
                 <td>@bill.RoomCharge</td>
             </tr>
         }
-        *@
+        
     </table>
 </div>

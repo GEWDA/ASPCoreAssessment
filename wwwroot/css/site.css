@@ -33,3 +33,10 @@
         display: none;
     }
 }
+
+
+.homepage-panel {margin-top: 15px;}
+.table-heading {margin:10px 8px 8px 8px;}
+.panel-myheading {
+    font-weight:bold /*15px elephant, arial, verdana;}*/
+}
