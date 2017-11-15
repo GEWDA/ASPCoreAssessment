@@ -33,7 +33,8 @@ namespace ASPCoreAssessment
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddScoped<IHotelService, FakeHotelService>();
+            //services.AddScoped<IHotelService, FakeHotelService>();
+            services.AddScoped<IHotelService, HotelService>();
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
