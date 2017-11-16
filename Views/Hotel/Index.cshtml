@@ -8,11 +8,11 @@
     ViewData["Header-Rooms"] = "Rooms";
     ViewData["Header-Guests"] = "Guests";
     ViewData["Header-Billing"] = "Billing";
-    ViewData["ViewInDetail"] = "More...";
+    ViewData["AddItem"] = "New...";
 }
 
 <div class="panel panel-default homepage-panel">
-    <div class="panel-heading panel-myheading">@ViewData["Title"]</div>
+    <div class="panel-heading panel-myheading"><h1>@ViewData["Title"]</h1></div>
     <br />
 
     @*
@@ -20,8 +20,24 @@
     *@
     <br />
     <div class="panel-heading table-heading">
-        @ViewData["Header-Bookings"]
-        <button class="viewbookings-button">@ViewData["ViewInDetail"]</button>
+        <h2>@ViewData["Header-Bookings"]</h2>
+        <button class="viewbookings-button" id="view-bookings-button">@ViewData["AddItem"]</button>
+        <div class="bookings-form panel-heading" id="bookings-form">
+            <h3>Add a booking</h3>
+            <form>
+                <label for="booking-from">Date From</label>
+                <input id="booking-from" type="datetime">
+                <label for="booking-to">Date To</label>
+                <input id="booking-to" type="datetime">
+                <label for="booking-hotel-room-id">Room Id</label>
+                <input id="booking-hotel-room-id">
+                <label for="booking-cost">Cost</label>
+                <input id="booking-cost">
+                <label for="booking-room">Room number</label>
+                <input id="booking-room">
+                <button type="submit" id="add-booking-button">Submit</button>
+            </form>
+        </div>
     </div>
     <table class="table table-hover">
         <thead>
@@ -54,8 +70,28 @@
     *@
     <br />
     <div class="panel-heading table-heading">
-        @ViewData["Header-Rooms"]
-        <button class="viewrooms-button">@ViewData["ViewInDetail"]</button>
+        <h2>@ViewData["Header-Rooms"]</h2>
+        <button class="viewrooms-button" id="view-rooms-button">@ViewData["AddItem"]</button>
+        <div class="rooms-form panel-heading" id="rooms-form" >
+            <h3>Add a room</h3>
+            <form>
+                <label for="room-number">Room Number</label>
+                <input id="room-number">
+                <label for="room-single-beds">Single Beds</label>
+                <input id="room-single-beds">
+                <label for="room-single-price">Single Price</label>
+                <input id="room-single-price">
+                <label for="room-double-beds">Double</label>
+                <input id="room-double-beds">
+                <label for="room-double-price">Double Price</label>
+                <input id="room-double-price">
+                <label for="room-extra-beds">Extra</label>
+                <input id="room-extra-beds">
+                <label for="room-extra-price">Extra Price</label>
+                <input id="room-extra-price">
+                <button type="submit" id="add-room-button">Submit</button>
+            </form>
+        </div>
     </div>
     <table class="table table-hover">
         <thead>
@@ -93,8 +129,34 @@
     *@
     <br />
     <div class="panel-heading table-heading">
-        @ViewData["Header-Guests"]
-        <button class="viewguests-button">@ViewData["ViewInDetail"]</button>
+        <h2>@ViewData["Header-Guests"]</h2>
+        <button class="viewguests-button" id="view-guests-button">@ViewData["AddItem"]</button>
+        <div class="guests-form panel-heading" id="guests-form">
+            <h3>Add a guest</h3>
+            <form>
+                <label for="guest-number">First Name</label>
+                <input id="guest-number">
+                <label for="guest-last-name">Last Name</label>
+                <input id="guest-last-name">
+                <label for="guest-address">Address</label>
+                <input id="guest-address">
+                <label for="guest-number">Number of Guests</label>
+                <input id="guest-number">
+                <label for="guest-room">Room Booked</label>
+                <input id="guest-room">
+                <label for="guest-booking-id">Booking Id</label>
+                <input id="guest-booking-id">
+                <label for="guest-check-in">Check In</label>
+                <input id="guest-check-in">
+                <label for="guest-check-out">Check Out</label>
+                <input id="guest-check-out">
+                <label for="guest-booking-date">Booking Date</label>
+                <input id="guest-booking-date">
+                <label for="guest-booking">Booking</label>
+                <input id="guest-booking">
+                <button type="submit" id="add-guest-button">Submit</button>
+            </form>
+        </div>
     </div>
     <table class="table table-hover">
         <thead>
@@ -136,8 +198,26 @@
     *@
     <br />
     <div class="panel-heading table-heading">
-        @ViewData["Header-Billing"]
-        <button class="viewbilling-button">@ViewData["ViewInDetail"]</button>
+        <h2>@ViewData["Header-Billing"]</h2>
+        <button class="viewbilling-button" id="view-billing-button">@ViewData["AddItem"]</button>
+        <div class="billing-form panel-heading" id="billing-form">
+            <h3>Add a bill</h3>
+            <form>
+                <label for="bill-guest">Guest</label>
+                <input id="bill-guest">
+                <label for="bill-guest-id">Guest Id</label>
+                <input id="bill-guest-id">
+                <label for="bill-bar-charge">Bar Charge</label>
+                <input id="bill-bar-charge">
+                <label for="bill-wifi-charge">WiFi Charge</label>
+                <input id="bill-wifi-charge">
+                <label for="bill-phone-charge">Telephone Charge</label>
+                <input id="bill-phone-charge">
+                <label for="bill-room-charge">Room Charge</label>
+                <input id="bill-room-charge">
+                <button type="submit" id="add-bill-button">Submit</button>
+            </form>
+        </div>
     </div>
     <table class="table table-hover">
         <thead>

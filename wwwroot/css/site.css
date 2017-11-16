@@ -34,9 +34,10 @@
     }
 }
 
-
+/*none of these are taking effect, even with !important*/
 .homepage-panel {margin-top: 15px;}
 .table-heading {margin:10px 8px 8px 8px;}
 .panel-myheading {
-    font-weight:bold /*15px elephant, arial, verdana;}*/
+    font-weight:bold; /*15px elephant, arial, verdana;}*/
 }
+.rooms-form{visibility:hidden !important;}
